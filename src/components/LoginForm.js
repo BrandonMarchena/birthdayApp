@@ -93,4 +93,4 @@ const styles = StyleSheet.create({
     error: {
         borderColor: '#940c0c',
     }
-})
+});

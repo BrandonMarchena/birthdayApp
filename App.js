@@ -7,10 +7,18 @@ import {
   Text,
   Button,
   StatusBar,
+  YellowBox,
+  LogBox
 } from 'react-native';
+import {decode, encode} from 'base-64';
 import Auth from './src/components/Auth';
 import firebase from './src/utils/firebase';
 import ListBirthday from './src/components/ListBirthday';
+
+if(!global.btoa) global.btoa = encode;
+if(!global.atob) global.atob = decode;
+
+LogBox.ignoreLogs(["Setting a timer for a long period of time"]);
 
 const App = () => {
 
